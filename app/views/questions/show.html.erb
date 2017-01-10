@@ -1,7 +1,12 @@
+<p><%= link_to "Back to All Questions", questions_path %></p>
+<p><%= link_to "Edit this Question", edit_question_path %></p>
+<p><%= link_to "Delete this Question", @question, method: :delete, data: {confirm: "Are you sure?"} %></p>
+
 <h1><%= @question.title %></h1>
-<br>
+
 <h4>Question Description:</h4>
 <p><%= @question.description %></p>
+
 
 
 <h4>Answer this Question:</h4>
