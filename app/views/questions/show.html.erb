@@ -1,0 +1,16 @@
+<h1><%= @question.title %></h1>
+<br>
+<h4>Question Description:</h4>
+<p><%= @question.description %></p>
+
+
+<h4>Answer this Question:</h4>
+<%= render 'answers/form', { question: @question, answer: @answer } %>
+<br>
+
+<h4>Previously Submitted Answers:</h4>
+<ul style="list-style: none;">
+  <% @answers.each do |answer| %>
+    <li><%= answer.body %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,740 @@
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1074805786571307735);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1074805786571307735)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-01-09 19:06:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."updated_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (16.3ms)
+Started GET "/" for 127.0.0.1 at 2017-01-09 19:06:47 -0500
+Processing by QuestionsController#index as HTML
+Completed 200 OK in 281ms (Views: 267.2ms | ActiveRecord: 6.0ms)
+
+
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (1.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."updated_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 22ms (Views: 14.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-09 19:06:49 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (18.6ms)
+  [1m[36mAnswer Load (0.7ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 70ms (Views: 31.8ms | ActiveRecord: 9.4ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:07:00 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fvWoiaOrOrNx4clVV7NdzjzqIkcb9mJUN7ftVcoOztkSoWqpM9ViUWSckr9IzhzpVuSwawex+xMCvC9TlM+o+Q==", "answer"=>{"body"=>"you cray"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering answers/new.html.erb within layouts/application
+  Rendered answers/_form.html.erb (1.5ms)
+  Rendered answers/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 18ms (Views: 11.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:08:50 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iu5kqP7M4PJuNcnjy9LVYq0HBpfs1ygZUK4FssXUoYDmuqaIbrK4EHtIkgnUr5RFxwmUu/CQsV5lpce0mxXHoA==", "answer"=>{"body"=>"you cray"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering answers/new.html.erb within layouts/application
+  Rendered answers/_form.html.erb (2.1ms)
+  Rendered answers/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:09:19 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"roYtz1O4Or9g/6NO/yYfjHaOWvDK46dW3Dr3Q8qdPl/C0u/vw8ZiXXWC+KTgW16rHIDI3NakPhHpMTVFlFxYfw==", "answer"=>{"body"=>"you crazy, yo! woodchucks would never chuck wood!"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering answers/new.html.erb within layouts/application
+  Rendered answers/_form.html.erb (2.6ms)
+  Rendered answers/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:10:58 -0500
+Started GET "/questions" for 127.0.0.1 at 2017-01-09 19:11:08 -0500
+Started GET "/questions" for 127.0.0.1 at 2017-01-09 19:11:08 -0500
+Started GET "/questions" for 127.0.0.1 at 2017-01-09 19:11:08 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+nwjWvQTQLPaLEqrdtXxyOcKdM+u4ltsgefG/gp99a3vTKt+64V4NoV6sCyphbgSZK7/yL8ECqHDF0dpuiR9g==", "answer"=>{"body"=>"you crazy, yo! woodchucks would never chuck wood!"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering answers/_form.html.erb within layouts/application
+  Rendered answers/_form.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 9.1ms | ActiveRecord: 4.7ms)
+
+
+Processing by QuestionsController#index as HTML
+Processing by QuestionsController#index as HTML
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  Rendering questions/index.html.erb within layouts/application
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."updated_at" DESC[0m
+  [1m[36mQuestion Load (1.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."updated_at" DESC[0m
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."updated_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (11.3ms)
+  Rendered questions/index.html.erb within layouts/application (12.9ms)
+  Rendered questions/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 31ms (Views: 17.8ms | ActiveRecord: 10.9ms)
+
+
+Completed 200 OK in 43ms (Views: 27.2ms | ActiveRecord: 5.5ms)
+
+
+Completed 200 OK in 47ms (Views: 24.2ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-09 19:11:10 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (2.4ms)
+  [1m[36mAnswer Load (0.7ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 54ms (Views: 15.0ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:11:23 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GTcnzwd08LJ6FhIRoY8qimjUP9/aEqkv77qcffAzlqR1Y+XvlwqoUG9rSfu+8mutAtqt88ZVMGjasV57rvLwhA==", "answer"=>{"body"=>"how the heck?"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering answers/_form.html.erb within layouts/application
+  Rendered answers/_form.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 17ms (Views: 11.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:13:26 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GTcnzwd08LJ6FhIRoY8qimjUP9/aEqkv77qcffAzlqR1Y+XvlwqoUG9rSfu+8mutAtqt88ZVMGjasV57rvLwhA==", "answer"=>{"body"=>"how the heck?"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::MissingTemplate (Missing template questions/1 with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/views"
+):
+  
+app/controllers/answers_controller.rb:22:in `create'
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (68.9ms)
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-09 19:14:02 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (2.9ms)
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 40ms (Views: 18.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:14:05 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kZwKWVSk0EBK5ncgo2ZiHPa8U0Pj4S1GyPl4HrPvQIv9yMh5xNqIol+bLMq8GyM7nLLBb/+mtAH98roY7S4mqw==", "answer"=>{"body"=>"dkjfshd"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (1.4ms)
+  Rendered questions/show.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10: 
+    11: <h4>Previously Submitted Answers:</h4>
+    12: <ul style="list-style: none;">
+    13:   <% @answers.each do |answer| %>
+    14:     <li><%= answer.body %></li>
+    15:   <% end %>
+    16: </ul>
+  
+app/views/questions/show.html.erb:13:in `_app_views_questions_show_html_erb__4031133656767274000_70205159927500'
+app/controllers/answers_controller.rb:22:in `create'
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.8ms)
+Started PUT "/__web_console/repl_sessions/55262833692cbd94fcadbbaf1f6797a0" for 127.0.0.1 at 2017-01-09 19:17:17 -0500
+Started PUT "/__web_console/repl_sessions/55262833692cbd94fcadbbaf1f6797a0" for 127.0.0.1 at 2017-01-09 19:17:19 -0500
+Started PUT "/__web_console/repl_sessions/55262833692cbd94fcadbbaf1f6797a0" for 127.0.0.1 at 2017-01-09 19:17:26 -0500
+Started PUT "/__web_console/repl_sessions/55262833692cbd94fcadbbaf1f6797a0" for 127.0.0.1 at 2017-01-09 19:17:27 -0500
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 1]]
+Started PUT "/__web_console/repl_sessions/55262833692cbd94fcadbbaf1f6797a0" for 127.0.0.1 at 2017-01-09 19:17:36 -0500
+Started PUT "/__web_console/repl_sessions/55262833692cbd94fcadbbaf1f6797a0" for 127.0.0.1 at 2017-01-09 19:17:38 -0500
+Started PUT "/__web_console/repl_sessions/55262833692cbd94fcadbbaf1f6797a0" for 127.0.0.1 at 2017-01-09 19:20:28 -0500
+Started PUT "/__web_console/repl_sessions/55262833692cbd94fcadbbaf1f6797a0" for 127.0.0.1 at 2017-01-09 19:20:56 -0500
+Started PUT "/__web_console/repl_sessions/55262833692cbd94fcadbbaf1f6797a0" for 127.0.0.1 at 2017-01-09 19:21:02 -0500
+Started PUT "/__web_console/repl_sessions/55262833692cbd94fcadbbaf1f6797a0" for 127.0.0.1 at 2017-01-09 19:21:32 -0500
+  [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+Started PUT "/__web_console/repl_sessions/55262833692cbd94fcadbbaf1f6797a0" for 127.0.0.1 at 2017-01-09 19:21:36 -0500
+Started PUT "/__web_console/repl_sessions/55262833692cbd94fcadbbaf1f6797a0" for 127.0.0.1 at 2017-01-09 19:21:37 -0500
+Started GET "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:21:46 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for AnswersController):
+  
+actionpack (5.0.1) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-09 19:21:55 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (2.2ms)
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 35ms (Views: 12.5ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:22:13 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WH3IUFUtgb1/OZidik54Vzx20TPUeHgFrcY/KIQu1FI0KQpwxVPZX2pEw3eVMzlwVnhDH8g/4UKYzf0u2u+ycg==", "answer"=>{"body"=>"this is a stupid answer to a stupid question"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (1.8ms)
+  Rendered questions/show.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10: 
+    11: <h4>Previously Submitted Answers:</h4>
+    12: <ul style="list-style: none;">
+    13:   <% @answers.each do |answer| %>
+    14:     <li><%= answer.body %></li>
+    15:   <% end %>
+    16: </ul>
+  
+app/views/questions/show.html.erb:13:in `_app_views_questions_show_html_erb__4031133656767274000_70205160348860'
+app/controllers/answers_controller.rb:16:in `create'
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.8ms)
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-09 19:24:56 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (2.2ms)
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 36ms (Views: 12.1ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:25:02 -0500
+  
+SyntaxError (/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/controllers/answers_controller.rb:16: syntax error, unexpected ':', expecting keyword_end
+      notice: "Please answer in at least 50 characters"
+             ^):
+  
+app/controllers/answers_controller.rb:16: syntax error, unexpected ':', expecting keyword_end
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.9ms)
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-09 19:25:39 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (2.9ms)
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 38ms (Views: 16.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:25:43 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u0wLkOW9mZX8RvqYECXQtphdI/a3SPeEep1QDsnoW9TXGMmwdcPBd+k7oXIPWJGR8lOx2qsPbsNPlpIIlyk99A==", "answer"=>{"body"=>"b"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for AnswersController#create, rendering head :no_content
+Completed 204 No Content in 53ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:25:48 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u0wLkOW9mZX8RvqYECXQtphdI/a3SPeEep1QDsnoW9TXGMmwdcPBd+k7oXIPWJGR8lOx2qsPbsNPlpIIlyk99A==", "answer"=>{"body"=>"b"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for AnswersController#create, rendering head :no_content
+Completed 204 No Content in 61ms (ActiveRecord: 1.1ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:28:22 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u0wLkOW9mZX8RvqYECXQtphdI/a3SPeEep1QDsnoW9TXGMmwdcPBd+k7oXIPWJGR8lOx2qsPbsNPlpIIlyk99A==", "answer"=>{"body"=>"b"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for AnswersController#create, rendering head :no_content
+Completed 204 No Content in 51ms (ActiveRecord: 0.7ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:29:49 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u0wLkOW9mZX8RvqYECXQtphdI/a3SPeEep1QDsnoW9TXGMmwdcPBd+k7oXIPWJGR8lOx2qsPbsNPlpIIlyk99A==", "answer"=>{"body"=>"b"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+No template found for AnswersController#create, rendering head :no_content
+Completed 204 No Content in 50ms (ActiveRecord: 0.9ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:29:52 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u0wLkOW9mZX8RvqYECXQtphdI/a3SPeEep1QDsnoW9TXGMmwdcPBd+k7oXIPWJGR8lOx2qsPbsNPlpIIlyk99A==", "answer"=>{"body"=>"b"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for AnswersController#create, rendering head :no_content
+Completed 204 No Content in 49ms (ActiveRecord: 0.7ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:29:55 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u0wLkOW9mZX8RvqYECXQtphdI/a3SPeEep1QDsnoW9TXGMmwdcPBd+k7oXIPWJGR8lOx2qsPbsNPlpIIlyk99A==", "answer"=>{"body"=>"jnfsd"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for AnswersController#create, rendering head :no_content
+Completed 204 No Content in 52ms (ActiveRecord: 0.9ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:31:16 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u0wLkOW9mZX8RvqYECXQtphdI/a3SPeEep1QDsnoW9TXGMmwdcPBd+k7oXIPWJGR8lOx2qsPbsNPlpIIlyk99A==", "answer"=>{"body"=>"jnfsd"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::MissingTemplate (Missing template questions/1 with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/views"
+):
+  
+app/controllers/answers_controller.rb:17:in `create'
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (54.0ms)
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-09 19:31:35 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (2.2ms)
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 28ms (Views: 13.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:31:39 -0500
+  
+SyntaxError (/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/controllers/answers_controller.rb:17: syntax error, unexpected '(', expecting keyword_end
+      render :question_path(@question)
+                            ^
+/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/controllers/answers_controller.rb:24: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/answers_controller.rb:17: syntax error, unexpected '(', expecting keyword_end
+app/controllers/answers_controller.rb:24: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.2ms)
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-09 19:31:44 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (1.3ms)
+  [1m[36mAnswer Load (0.6ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 16ms (Views: 11.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:31:49 -0500
+  
+SyntaxError (/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/controllers/answers_controller.rb:17: syntax error, unexpected '(', expecting keyword_end
+      render :question_path(@question)
+                            ^
+/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/controllers/answers_controller.rb:24: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/answers_controller.rb:17: syntax error, unexpected '(', expecting keyword_end
+app/controllers/answers_controller.rb:24: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.8ms)
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-09 19:32:21 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (2.1ms)
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 28ms (Views: 13.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:32:24 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eQ51wj5lIFH/apL3MZUOCYNctQvabeUSAVtNEbSQu3IVWrfirht4s+oXyR0u6E8u6VInJ8YqfFU0UI8X6lHdUg==", "answer"=>{"body"=>"sd"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::MissingTemplate (Missing template answers/question_path, application/question_path with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/views"
+):
+  
+app/controllers/answers_controller.rb:17:in `create'
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.1ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (66.5ms)
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-09 19:33:28 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (2.0ms)
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 29ms (Views: 13.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:33:30 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cdJ8BfKLEs/MaaEkAAcrBwNFN2cX0ntYEt1lGHKRNdsdhr4lYvVKLdkU+s4femogaUulSwuV4h8n1qceLFBT+w==", "answer"=>{"body"=>"as"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::MissingTemplate (Missing template questions/1 with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/views"
+):
+  
+app/controllers/answers_controller.rb:18:in `create'
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (55.5ms)
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-09 19:33:48 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-09 19:33:48 -0500
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (12.1ms)
+  [1m[36mAnswer Load (0.6ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 56ms (Views: 26.1ms | ActiveRecord: 1.0ms)
+
+
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (2.1ms)
+  [1m[36mAnswer Load (0.6ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 35ms (Views: 14.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:33:50 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ARygBT6OsIMaYqlWT3ewmACq6Mep4Qx1FRsDK13SPn9tSGIlrvDoYQ8f8rxQCvG/aqR667WmlTIgEMEtAxNYXw==", "answer"=>{"body"=>"as"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::MissingTemplate (Missing template answers/@path, application/@path with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/views"
+):
+  
+app/controllers/answers_controller.rb:18:in `create'
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (58.0ms)
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-09 19:34:57 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (2.1ms)
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 29ms (Views: 13.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:34:59 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4ShZOzjwQnZjKpsQZi4C8LkuD6yyLj7o7DJFoEICRVmNfJsbqI4alHZXwPp5U0PX0yCdgK5pp6/ZOYemHMMjeQ==", "answer"=>{"body"=>"sd"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering answers/new.html.erb within layouts/application
+  Rendered answers/_form.html.erb (1.8ms)
+  Rendered answers/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:35:12 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVVTTX75YtXFCJkH3njd/ILQLypDZImoIwdgbvQqz7YRAZFt7oc6N9B1wu3BBZzb6N69Bl8jEO8WDKJoquuplg==", "answer"=>{"body"=>"sdsdfdfsdsdgdfhghjfghdsfasdssfgfghdfgvccasxasxascf"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "sdsdfdfsdsdgdfhghjfghdsfasdssfgfghdfgvccasxasxascf"], ["question_id", 1], ["created_at", 2017-01-10 00:35:12 UTC], ["updated_at", 2017-01-10 00:35:12 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/questions/1
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-09 19:35:12 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (1.9ms)
+  [1m[36mAnswer Load (0.6ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 19ms (Views: 13.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-09 19:35:35 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (2.0ms)
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:35:38 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ohbHN2m/aZVDefTweX2roNJo2CxEONQndRDFQ/BJgJvOQgUX+cExd1YErxpmAOqHuGZKAFh/TWBAGwdFrojmuw==", "answer"=>{"body"=>"d"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering answers/new.html.erb within layouts/application
+  Rendered answers/_form.html.erb (1.7ms)
+  Rendered answers/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:35:58 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KUhSOjxglEaXvqUrbf1XAp5pZfNLhMH8uWRTmACTZ1pFHJAarB7MpILD/sFygBYl9Gf331fDWLuMb5GeXlIBeg==", "answer"=>{"body"=>"you are stupid this is stupid stupid stupid stupid"}, "commit"=>"Answer", "question_id"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "you are stupid this is stupid stupid stupid stupid"], ["question_id", 1], ["created_at", 2017-01-10 00:35:58 UTC], ["updated_at", 2017-01-10 00:35:58 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/questions/1
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-09 19:35:58 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (2.3ms)
+  [1m[36mAnswer Load (0.6ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 19ms (Views: 13.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-10 10:49:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (1.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."updated_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (18.8ms)
+Started GET "/" for 127.0.0.1 at 2017-01-10 10:49:06 -0500
+Completed 200 OK in 246ms (Views: 227.1ms | ActiveRecord: 7.4ms)
+
+
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (2.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."updated_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2017-01-10 10:50:42 -0500
+Processing by QuestionsController#new as HTML
+  Rendering questions/new.html.erb within layouts/application
+  Rendered questions/_form.html.erb (11.5ms)
+  Rendered questions/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/1" for 127.0.0.1 at 2017-01-10 10:50:47 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (9.9ms)
+  [1m[36mAnswer Load (1.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 1]]
+  Rendered questions/show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 66ms (Views: 22.3ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-10 12:16:11 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (1.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."updated_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (19.4ms)
+Started GET "/" for 127.0.0.1 at 2017-01-10 12:16:11 -0500
+Completed 200 OK in 261ms (Views: 245.0ms | ActiveRecord: 8.0ms)
+
+
+Processing by QuestionsController#index as HTML
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (1.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."updated_at" DESC[0m
+  Rendered questions/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 1.2ms)
+
+
