@@ -5,7 +5,7 @@
 <h1><%= @question.title %></h1>
 
 <h4>Question Description:</h4>
-<p><%= @question.description %></p>
+<p><%= markdown(@question.description) %></p>
 
 
 
@@ -16,6 +16,6 @@
 <h4>Previously Submitted Answers:</h4>
 <ul style="list-style: none;">
   <% @answers.each do |answer| %>
-    <li><%= answer.body %></li>
+    <li><%= markdown(answer.body) %></li>
   <% end %>
 </ul>

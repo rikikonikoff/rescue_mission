@@ -135,11 +135,11 @@ Processing by AnswersController#create as HTML
 Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::MissingTemplate (Missing template questions/1 with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
   * "/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/views"
 ):
-  
+
 app/controllers/answers_controller.rb:22:in `create'
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -172,16 +172,16 @@ Processing by AnswersController#create as HTML
 Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    10: 
+    10:
     11: <h4>Previously Submitted Answers:</h4>
     12: <ul style="list-style: none;">
     13:   <% @answers.each do |answer| %>
     14:     <li><%= answer.body %></li>
     15:   <% end %>
     16: </ul>
-  
+
 app/views/questions/show.html.erb:13:in `_app_views_questions_show_html_erb__4031133656767274000_70205159927500'
 app/controllers/answers_controller.rb:22:in `create'
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -207,9 +207,9 @@ Started PUT "/__web_console/repl_sessions/55262833692cbd94fcadbbaf1f6797a0" for 
 Started PUT "/__web_console/repl_sessions/55262833692cbd94fcadbbaf1f6797a0" for 127.0.0.1 at 2017-01-09 19:21:36 -0500
 Started PUT "/__web_console/repl_sessions/55262833692cbd94fcadbbaf1f6797a0" for 127.0.0.1 at 2017-01-09 19:21:37 -0500
 Started GET "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:21:46 -0500
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for AnswersController):
-  
+
 actionpack (5.0.1) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.1) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.1) lib/action_controller/metal.rb:190:in `dispatch'
@@ -286,16 +286,16 @@ Processing by AnswersController#create as HTML
 Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.7ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
-    10: 
+    10:
     11: <h4>Previously Submitted Answers:</h4>
     12: <ul style="list-style: none;">
     13:   <% @answers.each do |answer| %>
     14:     <li><%= answer.body %></li>
     15:   <% end %>
     16: </ul>
-  
+
 app/views/questions/show.html.erb:13:in `_app_views_questions_show_html_erb__4031133656767274000_70205160348860'
 app/controllers/answers_controller.rb:16:in `create'
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -318,11 +318,11 @@ Completed 200 OK in 36ms (Views: 12.1ms | ActiveRecord: 8.1ms)
 
 
 Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:25:02 -0500
-  
+
 SyntaxError (/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/controllers/answers_controller.rb:16: syntax error, unexpected ':', expecting keyword_end
       notice: "Please answer in at least 50 characters"
              ^):
-  
+
 app/controllers/answers_controller.rb:16: syntax error, unexpected ':', expecting keyword_end
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -412,11 +412,11 @@ Processing by AnswersController#create as HTML
 Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActionView::MissingTemplate (Missing template questions/1 with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
   * "/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/views"
 ):
-  
+
 app/controllers/answers_controller.rb:17:in `create'
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -438,12 +438,12 @@ Completed 200 OK in 28ms (Views: 13.2ms | ActiveRecord: 0.8ms)
 
 
 Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:31:39 -0500
-  
+
 SyntaxError (/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/controllers/answers_controller.rb:17: syntax error, unexpected '(', expecting keyword_end
       render :question_path(@question)
                             ^
 /Users/rikikonikoff/Documents/Challenges/rescue-mission/app/controllers/answers_controller.rb:24: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/controllers/answers_controller.rb:17: syntax error, unexpected '(', expecting keyword_end
 app/controllers/answers_controller.rb:24: syntax error, unexpected end-of-input, expecting keyword_end
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -466,12 +466,12 @@ Completed 200 OK in 16ms (Views: 11.3ms | ActiveRecord: 1.0ms)
 
 
 Started POST "/questions/1/answers" for 127.0.0.1 at 2017-01-09 19:31:49 -0500
-  
+
 SyntaxError (/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/controllers/answers_controller.rb:17: syntax error, unexpected '(', expecting keyword_end
       render :question_path(@question)
                             ^
 /Users/rikikonikoff/Documents/Challenges/rescue-mission/app/controllers/answers_controller.rb:24: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/controllers/answers_controller.rb:17: syntax error, unexpected '(', expecting keyword_end
 app/controllers/answers_controller.rb:24: syntax error, unexpected end-of-input, expecting keyword_end
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -502,11 +502,11 @@ Processing by AnswersController#create as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::MissingTemplate (Missing template answers/question_path, application/question_path with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
   * "/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/views"
 ):
-  
+
 app/controllers/answers_controller.rb:17:in `create'
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -536,11 +536,11 @@ Processing by AnswersController#create as HTML
 Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.1ms)
 
 
-  
+
 ActionView::MissingTemplate (Missing template questions/1 with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
   * "/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/views"
 ):
-  
+
 app/controllers/answers_controller.rb:18:in `create'
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -581,11 +581,11 @@ Processing by AnswersController#create as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms)
 
 
-  
+
 ActionView::MissingTemplate (Missing template answers/@path, application/@path with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
   * "/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/views"
 ):
-  
+
 app/controllers/answers_controller.rb:18:in `create'
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -783,9 +783,9 @@ Completed 200 OK in 25ms (Views: 11.5ms | ActiveRecord: 4.1ms)
 
 
 Started PATCH "/questions" for 127.0.0.1 at 2017-01-10 12:31:54 -0500
-  
+
 ActionController::RoutingError (No route matches [PATCH] "/questions"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -905,9 +905,9 @@ Processing by QuestionsController#update as HTML
 Completed 500 Internal Server Error in 141549ms (ActiveRecord: 2.9ms)
 
 
-  
+
 NoMethodError (undefined method `save' for #<Array:0x007fa1c3174578>):
-  
+
 app/controllers/questions_controller.rb:35:in `update'
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1004,55 +1004,6 @@ Processing by QuestionsController#edit as HTML
   Rendered questions/_form.html.erb (2.1ms)
   Rendered questions/edit.html.erb within layouts/application (3.9ms)
 Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.3ms)
-
-
-Started GET "/questions/1/edigt" for 127.0.0.1 at 2017-01-10 12:45:51 -0500
-  
-ActionController::RoutingError (No route matches [GET] "/questions/1/edigt"):
-  
-actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
-web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-rack (2.0.1) lib/rack/method_override.rb:22:in `call'
-rack (2.0.1) lib/rack/runtime.rb:22:in `call'
-activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
-rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
-railties (5.0.1) lib/rails/engine.rb:522:in `call'
-puma (3.6.2) lib/puma/configuration.rb:225:in `call'
-puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
-puma (3.6.2) lib/puma/server.rb:415:in `process_client'
-puma (3.6.2) lib/puma/server.rb:275:in `block in run'
-puma (3.6.2) lib/puma/thread_pool.rb:116:in `call'
-puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
-  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
-  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
-  Rendered collection of /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (5.1ms)
-  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
-  Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
-  Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (81.6ms)
-Started GET "/questions/1/edit" for 127.0.0.1 at 2017-01-10 12:45:55 -0500
-Processing by QuestionsController#edit as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  Rendering questions/edit.html.erb within layouts/application
-  Rendered questions/_form.html.erb (1.6ms)
-  Rendered questions/edit.html.erb within layouts/application (3.1ms)
-Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 0.3ms)
 
 
 Started PATCH "/questions/1" for 127.0.0.1 at 2017-01-10 12:46:06 -0500
@@ -1215,16 +1166,16 @@ Processing by QuestionsController#show as HTML
 Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `destroy' for #<#<Class:0x007fa1c76d7890>:0x007fa1c75077e0>):
     4: <p><%= @question.description %></p>
-    5: 
+    5:
     6: <%= link_to "Edit Question", edit_question_path %>
     7: <%= link_to "Delete Question", "/questions/#{@question.id}/destroy", method: destroy, data: { confirm: "Are you sure?" } %>
-    8: 
-    9: 
+    8:
+    9:
    10: <h4>Answer this Question:</h4>
-  
+
 app/views/questions/show.html.erb:7:in `_app_views_questions_show_html_erb___1099144695422642360_70166405210500'
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1246,9 +1197,9 @@ Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 0.8ms)
 
 
 Started GET "/questions/1/destroy" for 127.0.0.1 at 2017-01-10 13:06:23 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/questions/1/destroy"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -1487,11 +1438,11 @@ Processing by QuestionsController#show as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
 
 
-  
+
 SyntaxError (/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/views/questions/show.html.erb:7: syntax error, unexpected =>
 ...uestion", @question, method: => :delete );@output_buffer.saf...
 ...                               ^):
-  
+
 app/views/questions/show.html.erb:7: syntax error, unexpected =>
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1543,16 +1494,16 @@ Processing by QuestionsController#show as HTML
 Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `stringify_keys' for :delete:Symbol):
     4: <p><%= @question.description %></p>
-    5: 
+    5:
     6: <%= link_to "Edit Question", edit_question_path %>
     7: <%= link_to "Delete Question", @question, :delete %>
-    8: 
-    9: 
+    8:
+    9:
    10: <h4>Answer this Question:</h4>
-  
+
 app/views/questions/show.html.erb:7:in `_app_views_questions_show_html_erb___1099144695422642360_70166406620400'
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1772,9 +1723,9 @@ Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 0.8ms)
 
 
 Started GET "/questions/1/new" for 127.0.0.1 at 2017-01-10 13:26:15 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/questions/1/new"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -1982,7 +1933,7 @@ Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 0.9ms)
 
 Started GET "/questions" for 127.0.0.1 at 2017-01-10 13:46:14 -0500
 Started GET "/questions" for 127.0.0.1 at 2017-01-10 13:46:24 -0500
-  
+
 SyntaxError (/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/controllers/questions_controller.rb:20: syntax error, unexpected tSTRING_BEG, expecting keyword_end
 ...ion, flash[:question_created] "Question asked successfully"
 ...                               ^
@@ -1995,7 +1946,7 @@ SyntaxError (/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/control
 /Users/rikikonikoff/Documents/Challenges/rescue-mission/app/controllers/questions_controller.rb:36: syntax error, unexpected tSTRING_BEG, expecting keyword_end
 ...r :edit, flash[:unsuccessful] "Please fill out the form corr...
 ...                               ^):
-  
+
 app/controllers/questions_controller.rb:20: syntax error, unexpected tSTRING_BEG, expecting keyword_end
 app/controllers/questions_controller.rb:22: syntax error, unexpected tSTRING_BEG, expecting keyword_end
 app/controllers/questions_controller.rb:34: syntax error, unexpected tSTRING_BEG, expecting keyword_end
@@ -2008,7 +1959,7 @@ app/controllers/questions_controller.rb:36: syntax error, unexpected tSTRING_BEG
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
   Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.7ms)
-  
+
 SyntaxError (/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/controllers/questions_controller.rb:20: syntax error, unexpected tSTRING_BEG, expecting keyword_end
 ...ion, flash[:question_created] "Question asked successfully"
 ...                               ^
@@ -2021,7 +1972,7 @@ SyntaxError (/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/control
 /Users/rikikonikoff/Documents/Challenges/rescue-mission/app/controllers/questions_controller.rb:36: syntax error, unexpected tSTRING_BEG, expecting keyword_end
 ...r :edit, flash[:unsuccessful] "Please fill out the form corr...
 ...                               ^):
-  
+
 app/controllers/questions_controller.rb:20: syntax error, unexpected tSTRING_BEG, expecting keyword_end
 app/controllers/questions_controller.rb:22: syntax error, unexpected tSTRING_BEG, expecting keyword_end
 app/controllers/questions_controller.rb:34: syntax error, unexpected tSTRING_BEG, expecting keyword_end
@@ -2035,7 +1986,7 @@ app/controllers/questions_controller.rb:36: syntax error, unexpected tSTRING_BEG
   Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
   Rendered /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.1ms)
 Started GET "/questions" for 127.0.0.1 at 2017-01-10 13:46:59 -0500
-  
+
 SyntaxError (/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/controllers/questions_controller.rb:21: syntax error, unexpected tSTRING_BEG, expecting keyword_end
       flash[:question_created] "Question asked successfully"
                                 ^
@@ -2048,7 +1999,7 @@ SyntaxError (/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/control
 /Users/rikikonikoff/Documents/Challenges/rescue-mission/app/controllers/questions_controller.rb:40: syntax error, unexpected tSTRING_BEG, expecting keyword_end
       flash[:unsuccessful] "Please fill out the form correctly"
                             ^):
-  
+
 app/controllers/questions_controller.rb:21: syntax error, unexpected tSTRING_BEG, expecting keyword_end
 app/controllers/questions_controller.rb:24: syntax error, unexpected tSTRING_BEG, expecting keyword_end
 app/controllers/questions_controller.rb:37: syntax error, unexpected tSTRING_BEG, expecting keyword_end
@@ -2069,18 +2020,18 @@ Processing by QuestionsController#index as HTML
 Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActionView::Template::Error (Missing partial layouts/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
   * "/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/views"
 ):
      9:   </head>
-    10: 
+    10:
     11:   <body>
     12:     <%= render 'layouts/header' %>
     13:     <div class="container">
     14:       <% flash.each do |key, value| %>
     15:         <div class="alert alert-<%= key %>"><%= value %></div>
-  
+
 app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb___851520824947170049_70202379708340'
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2099,18 +2050,18 @@ Processing by QuestionsController#index as HTML
 Completed 500 Internal Server Error in 238ms (ActiveRecord: 5.7ms)
 
 
-  
+
 ActionView::Template::Error (Missing partial layouts/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
   * "/Users/rikikonikoff/Documents/Challenges/rescue-mission/app/views"
 ):
      9:   </head>
-    10: 
+    10:
     11:   <body>
     12:     <%= render 'layouts/header' %>
     13:     <div class="container">
     14:       <% flash.each do |key, value| %>
     15:         <div class="alert alert-<%= key %>"><%= value %></div>
-  
+
 app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb__4080815552385820663_70208578940720'
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/rikikonikoff/.gem/ruby/2.2.5/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2424,9 +2375,9 @@ Completed 200 OK in 31ms (Views: 24.8ms | ActiveRecord: 0.8ms)
 
 
 Started GET "/questions/2/answers" for 127.0.0.1 at 2017-01-10 14:13:05 -0500
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for AnswersController):
-  
+
 actionpack (5.0.1) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.1) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.1) lib/action_controller/metal.rb:190:in `dispatch'
@@ -2771,3 +2722,67 @@ Processing by QuestionsController#show as HTML
 Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/questions/3" for ::1 at 2017-01-10 15:17:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (26.2ms)
+  [1m[36mAnswer Load (1.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 3]]
+  Rendered questions/show.html.erb within layouts/application (42.1ms)
+Completed 200 OK in 329ms (Views: 273.4ms | ActiveRecord: 11.7ms)
+
+
+Started POST "/questions/3/answers" for ::1 at 2017-01-10 15:19:47 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E25Cp9TQCv/uYnAKr3vz1FrkOiZqNTJjRehOBCalhSicv+aXNhdOAoKct4zcUwgqJEu+LuMiZ7rufCnfBGSFHQ==", "answer"=>{"body"=>"# Heading\r\n## Sub-heading\r\n### Another deeper heading\r\n---\r\nBullet list:\r\n* boys\r\n* girls\r\n* other\r\n\r\nNumbered List  \r\n1. one  \r\n2. two  \r\n3. three"}, "commit"=>"Answer", "question_id"=>"3"}
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "# Heading\r\n## Sub-heading\r\n### Another deeper heading\r\n---\r\nBullet list:\r\n* boys\r\n* girls\r\n* other\r\n\r\nNumbered List  \r\n1. one  \r\n2. two  \r\n3. three"], ["question_id", 3], ["created_at", 2017-01-10 20:19:47 UTC], ["updated_at", 2017-01-10 20:19:47 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/questions/3
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/questions/3" for ::1 at 2017-01-10 15:19:47 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (1.4ms)
+  [1m[36mAnswer Load (1.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 3]]
+  Rendered questions/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 23ms (Views: 17.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/questions/3/answers" for ::1 at 2017-01-10 15:32:58 -0500
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P66+QBZ/Bjjn2PEO+ckcat33jR/Rkio8xblXRc38Z2Owfxpw9LhCxYsmNoiK4eeUo1gJF1iFf+VuLTCe7z1nVg==", "answer"=>{"body"=>"I want to see this block of code\r\n```\r\nas a code block\r\n```"}, "commit"=>"Answer", "question_id"=>"3"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "answers" ("body", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "I want to see this block of code\r\n```\r\nas a code block\r\n```"], ["question_id", 3], ["created_at", 2017-01-10 20:32:58 UTC], ["updated_at", 2017-01-10 20:32:58 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/questions/3
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/questions/3" for ::1 at 2017-01-10 15:32:58 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering questions/show.html.erb within layouts/application
+  Rendered answers/_form.html.erb (1.7ms)
+  [1m[36mAnswer Load (0.6ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1 ORDER BY "answers"."updated_at" ASC[0m  [["question_id", 3]]
+  Rendered questions/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 28ms (Views: 22.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/questions/3/edit" for ::1 at 2017-01-10 15:37:12 -0500
+Processing by QuestionsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering questions/edit.html.erb within layouts/application
+  Rendered questions/_form.html.erb (2.5ms)
+  Rendered questions/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 29ms (Views: 19.6ms | ActiveRecord: 0.4ms)
